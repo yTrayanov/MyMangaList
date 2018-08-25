@@ -1,0 +1,36 @@
+﻿@model UsersVewBindingModel
+@{
+    ViewData["Title"] = "Friends";
+}
+
+<h2>My Friends</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.BindingModel.Username"></label>
+        <input asp-for="@Model.BindingModel.Username" class="form-control" placeholder="Title">
+        @foreach (var modelState in this.ViewContext.ModelState)
+        {
+            @foreach (var err in modelState.Value.Errors)
+            {
+                <span class="text-danger">@err.ErrorMessage</span>
+            }
+
+        }
+
+    </div>
+    <button type="submit" class="btn btn-default">Add new friend</button>
+</form>
+
+
+@if (Model.ViewModel.Any())
+{
+    @foreach (var friend in Model.ViewModel)
+    {
+        <p>@friend.Username</p>
+        <a class="btn btn-default" asp-area="Users" asp-controller="Home" asp-action="RemoveFriend" asp-route-username="@friend.Username">Remove</a>
+    }
+}
+
+
+

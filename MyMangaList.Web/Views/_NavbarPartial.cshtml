@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "_NavbarPartial";
+}
+
+@if (User.IsInRole("Administrator"))
+{
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="navbar-brand">MyMangaList</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="Admin" asp-controller="Users" asp-action="Index">Show Users</a></li>
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+}
+else if (User.IsInRole("User"))
+{
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="Users" asp-controller="Home" asp-action="Index" class="navbar-brand">MyMangaList</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="Users" asp-controller="Manga" asp-action="Favourites">Favourites</a></li>
+                    <li><a asp-area="Users" asp-controller="Group" asp-action="Index">Groups</a></li>
+                    <li><a asp-area="Users" asp-controller="Manga" asp-action="Write">Write Manga</a></li>
+                    <li><a asp-area="Users" asp-controller="Home" asp-action="Friends">Friends</a></li>
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+
+}
+else
+{
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="Users" asp-controller="Home" asp-action="Index" class="navbar-brand">MyMangaList.Web</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About us</a></li>
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+}
+

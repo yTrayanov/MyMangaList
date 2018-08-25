@@ -1,0 +1,15 @@
+﻿@model UserAddBindingModel
+@{
+    ViewData["Title"] = "AddUser";
+}
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Username"></label>
+        <input asp-for="@Model.Username" class="form-control" placeholder="Title">
+        <span asp-validation-for="@Model.Username" class="text-danger"></span>
+    </div>
+    <button class="btn btn-default" type="submit" >Add User</button>
+</form>
+
+
+

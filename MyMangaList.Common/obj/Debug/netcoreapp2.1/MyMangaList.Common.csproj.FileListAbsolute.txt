@@ -1,0 +1,12 @@
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\bin\Debug\netcoreapp2.1\MyMangaList.Common.deps.json
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\bin\Debug\netcoreapp2.1\MyMangaList.Common.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.csproj.CoreCompileInputs.cache
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.AssemblyInfoInputs.cache
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.AssemblyInfo.cs
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.csprojAssemblyReference.cache
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.csproj.CopyComplete
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\bin\Debug\netcoreapp2.1\MyMangaList.Common.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\bin\Debug\netcoreapp2.1\MyMangaList.Models.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\bin\Debug\netcoreapp2.1\MyMangaList.Models.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Common\obj\Debug\netcoreapp2.1\MyMangaList.Common.pdb

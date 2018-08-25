@@ -1,0 +1,9 @@
+﻿@model StoryViewModel
+@{
+    ViewData["Title"] = "ReadStory";
+}
+
+<h1>@Model.Title</h1>
+<p>@Model.Story</p>
+<br />
+<a asp-area="Users" asp-controller="Comment" asp-action="Index" asp-route-id="@Model.MangaId">Comments</a>

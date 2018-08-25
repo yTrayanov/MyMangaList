@@ -1,0 +1,18 @@
+﻿@model IEnumerable<GroupViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>My Groups</h1>
+@foreach (var group in Model)
+{
+<div>
+    <p><a asp-area="Users" asp-controller="Group" asp-action="Chat" asp-route-Id="@group.Id">@group.Title</a></p>
+    <p><a asp-area="Users" asp-controller="Group" asp-action="Details" asp-route-Id="@group.Id">Details</a></p>
+    <a class="btn btn-default" asp-area="Users" asp-controller="Group" asp-action="AddUser" asp-route-id="@group.Id">Add member</a>
+    <a class="btn btn-default" asp-area="Users" asp-controller="Group" asp-action="LeaveGroup" asp-route-id="@group.Id">Leave group</a>
+</div>
+}
+
+<a class="btn btn-default" asp-area="Users" asp-controller="Group" asp-action="CreateGroup">Create new group</a>
+

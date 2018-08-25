@@ -1,0 +1,28 @@
+﻿@model CommentViewBindingModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Comments</h2>
+@if (Model.ViewModels.Any())
+{
+    @foreach (var comment in Model.ViewModels)
+    {
+        <article>
+            <div>
+                <p>@comment.User</p>
+                <p>@comment.Date</p>
+                <p>@comment.Content</p>
+            </div>
+        </article>
+    }
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.BindingModel.Content"></label>
+        <textarea class="form-control" asp-for="@Model.BindingModel.Content" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default" asp-route-id="@Model.BindingModel.MangaId">Post</button>
+</form>
+

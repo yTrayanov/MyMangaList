@@ -1,0 +1,16 @@
+﻿@model MangaDetailsViewModel
+@{
+    ViewData["Title"] = "Details for " + Model.Title;
+}
+
+<h2>Details for "@Model.Title"</h2>
+
+<img src="@Model.Image" />
+<p><strong>@Model.Author</strong></p>
+<p>@Model.Date</p>
+<p>@Model.LastUpdated</p>
+<p>@Model.ShortDescription</p>
+<p><a asp-area="Users" asp-controller="Manga" asp-action="ReadStory" asp-route-id="@Model.Id" >
+    If you find this manga fun , click here
+    </a></p>
+<button type="submint" value="Add to favourites" asp-area="Users" asp-controller="Manga" asp-action="Favour" asp-route-id="@Model.Id">Favour</button>

@@ -1,0 +1,27 @@
+﻿@model GroupViewBindingModel
+@{
+    ViewData["Title"] = "Chat";
+}
+
+<h2>@Model.GroupTitle</h2>
+
+@if (Model.ViewModel.Any())
+{
+    @foreach (var message in Model.ViewModel)
+    {
+        <div>
+            <p>@message.User</p>
+            <p>@message.Content</p>
+        </div>
+    }
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.BindingModel.Content"></label>
+        <textarea class="form-control" asp-for="@Model.BindingModel.Content" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default" asp-route-id="@Model.GroupId" >Send</button>
+</form>
+
+

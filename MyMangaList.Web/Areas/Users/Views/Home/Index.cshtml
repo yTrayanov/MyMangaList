@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MangaDetailsViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Start your adventure</h2>
+
+@foreach (var manga in @Model)
+{
+<article>
+    <img src="@manga.Image" alt="Manga img" />
+    <p>@manga.Title</p>
+    <p>@manga.Author</p>
+    <p>@manga.Genre</p>
+    <p>@manga.ShortDescription</p><p>
+        <a asp-area="Users" asp-controller="Manga" asp-action="ReadStory" asp-route-id="@manga.Id">
+            If you find this manga fun , click here
+        </a>
+    </p>
+    <a class="btn btn-default" asp-area="Users" asp-controller="Manga" asp-action="Favour" asp-route-id="@manga.Id">Favour</a>
+</article>
+}

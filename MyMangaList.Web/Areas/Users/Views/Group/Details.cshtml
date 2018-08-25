@@ -1,0 +1,15 @@
+﻿@model  GroupViewModel
+@{
+    ViewData["Title"] = "Details for " +Model.Title;
+}
+
+<h2>Details for @Model.Title group</h2>
+<p><strong>Creator</strong></p>
+<p>@Model.Creator</p>
+<p><strong>Users</strong></p>
+@foreach (var member in Model.Members)
+{
+    <p>@member.UserName</p>
+}
+
+

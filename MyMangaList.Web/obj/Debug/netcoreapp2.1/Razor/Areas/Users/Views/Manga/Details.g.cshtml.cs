@@ -19,22 +19,22 @@ using MyMangaList.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.ViewModels;
+using MyMangaList.DtoModels.ViewModels;
 
 #line default
 #line hidden
 #line 3 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.BindingModels;
+using MyMangaList.DtoModels.BindingModels;
 
 #line default
 #line hidden
 #line 4 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.MixedModels;
+using MyMangaList.DtoModels.MixedModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a9af567930596741551f73c7039fc9a1a4ecfc7", @"/Areas/Users/Views/Manga/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1c1d819689377b9c6d3567fcfc262454694daf4b", @"/Areas/Users/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"52bb22c8b1a2162133a3cf6c220ad7aaee172de9", @"/Areas/Users/Views/_ViewImports.cshtml")]
     public class Areas_Users_Views_Manga_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<MangaDetailsViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "Users", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -136,7 +136,7 @@ Write(Model.ShortDescription);
             WriteLiteral("</p>\r\n<p>");
             EndContext();
             BeginContext(282, 147, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a33314756f8471787ba05ef20455743", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3a3fa7e44874c69b73310919d63ac38", async() => {
                 BeginContext(374, 51, true);
                 WriteLiteral("\r\n    If you find this manga fun , click here\r\n    ");
                 EndContext();
@@ -175,7 +175,7 @@ Write(Model.ShortDescription);
             WriteLiteral("</p>\r\n");
             EndContext();
             BeginContext(435, 149, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9b386663a784081bf2b829c7c2f7c64", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c02332b254934f30828855546ae526ca", async() => {
                 BeginContext(569, 6, true);
                 WriteLiteral("Favour");
                 EndContext();

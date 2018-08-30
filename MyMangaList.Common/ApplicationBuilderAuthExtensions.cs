@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using MyMangaList.Models;
-
-namespace MyMangaList.Common
+﻿namespace MyMangaList.Common
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.Extensions.DependencyInjection;
+
+    using Models;
+    using Constants;
+
     public static class ApplicationBuilderAuthExtensions
     {
         private static readonly IdentityRole[] roles =

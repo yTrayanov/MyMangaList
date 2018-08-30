@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using MyMangaList.Web.Models;
-using Microsoft.AspNetCore.Authorization;
-using MyMangaList.Common;
-
-namespace MyMangaList.Web.Controllers
+﻿namespace MyMangaList.Web.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using MyMangaList.Constants;
+    using MyMangaList.Web.Models;
+    using System.Diagnostics;
+
     public class HomeController : Controller
     {
         public IActionResult Index()

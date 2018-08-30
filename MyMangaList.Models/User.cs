@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
-
-namespace MyMangaList.Models
+﻿namespace MyMangaList.Models
 {
+    using Microsoft.AspNetCore.Identity;
+    using System.Collections.Generic;
+
     public class User : IdentityUser
     {
         public User()
@@ -22,8 +22,10 @@ namespace MyMangaList.Models
 
         public ICollection<UsersInGroups> Groups { get; set; }
 
-
+        public ICollection<Request> Requests { get; set; }
+        
         public ICollection<Friend> UserContracts { get; set; }
+
         public ICollection<Friend> Friends { get; set; }
     }
 }

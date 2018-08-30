@@ -1217,6 +1217,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "MyMangaList.Constants/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/MyMangaList.Constants.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyMangaList.Constants.dll": {}
+        }
       }
     }
   },
@@ -4004,12 +4014,18 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "MyMangaList.Constants/1.0.0": {
+      "type": "project",
+      "path": "../MyMangaList.Constants/MyMangaList.Constants.csproj",
+      "msbuildProject": "../MyMangaList.Constants/MyMangaList.Constants.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.0",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "MyMangaList.Constants >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4041,7 +4057,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Constants\\MyMangaList.Constants.csproj": {
+              "projectPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Constants\\MyMangaList.Constants.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -19,22 +19,22 @@ using MyMangaList.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.ViewModels;
+using MyMangaList.DtoModels.ViewModels;
 
 #line default
 #line hidden
 #line 3 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.BindingModels;
+using MyMangaList.DtoModels.BindingModels;
 
 #line default
 #line hidden
 #line 4 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.MixedModels;
+using MyMangaList.DtoModels.MixedModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f9e6f94f343684816afecc712231c3eea435114", @"/Areas/Users/Views/Manga/ReadStory.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1c1d819689377b9c6d3567fcfc262454694daf4b", @"/Areas/Users/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"52bb22c8b1a2162133a3cf6c220ad7aaee172de9", @"/Areas/Users/Views/_ViewImports.cshtml")]
     public class Areas_Users_Views_Manga_ReadStory : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<StoryViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "Users", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -92,7 +92,7 @@ Write(Model.Story);
             WriteLiteral("</p>\r\n<br />\r\n");
             EndContext();
             BeginContext(122, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ce10544f8674250aa816080e48f5ef9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d7f8c98bcc7d47d9a626de7a49e90892", async() => {
                 BeginContext(216, 8, true);
                 WriteLiteral("Comments");
                 EndContext();

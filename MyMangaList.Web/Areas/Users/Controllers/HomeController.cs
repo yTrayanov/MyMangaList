@@ -1,33 +1,30 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using MyMangaList.Data;
-using MyMangaList.Models;
-using MyMangaList.Services.Users;
-using MyMangaList.ViewModels.MixedModels;
-using MyMangaList.ViewModels.ViewModels;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MyMangaList.Web.Areas.Users.Controllers
+﻿namespace MyMangaList.Web.Areas.Users.Controllers
 {
+    using AutoMapper;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using MyMangaList.Data;
+    using MyMangaList.DtoModels.MixedModels;
+    using MyMangaList.Models;
+    using MyMangaList.Services.Users;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Constants;
+
     public class HomeController : UsersController
     {
-        public HomeController(
-            MyMangaListContext context,
-            UserManager<User> userManager,
-            IMapper mapper,
-            HomeService homeService)
-            : base(context, userManager, mapper, homeService)
+        private HomeService homeService;
+
+        public HomeController(UserManager<User> userManager , HomeService homeService) 
+            : base(userManager)
         {
+            this.homeService = homeService;
         }
 
-
+        [HttpGet]
         public IActionResult Index()
         {
-            var mangas = this.Context.Manga;
-            var models = this.Mapper.Map<IEnumerable<MangaDetailsViewModel>>(mangas);
+            var models = this.homeService.GetAllManga();
 
             return View(models);
         }
@@ -38,8 +35,8 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         {
             var currentUser = await UserManager.GetUserAsync(this.User);
 
-            var model = this.HomeService.GetUserFriends(currentUser.UserName);
-            
+            var model = this.homeService.GetUserFriends(currentUser.UserName);
+
 
             return this.View(model);
         }
@@ -48,41 +45,26 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         public async Task<IActionResult> Friends(UsersVewBindingModel model)
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
-            var friend = this.Context.Users.FirstOrDefault(u => u.UserName == model.BindingModel.Username);
+            var friend = this.homeService.FindUserByName(model.BindingModel.Username);
 
             if (friend == null)
             {
                 ModelState.AddModelError("Not Found", "This user doesn't exist. Please try again.");
-                var friendsModel = this.HomeService.GetUserFriends(currentUser.UserName);
+                var friendsModel = this.homeService.GetUserFriends(currentUser.UserName);
                 return View(friendsModel);
             }
 
-            bool DoesUserExist = this.Context.Friends.Any(f => f.UserId == currentUser.Id && f.ContractId == friend.Id);
+            this.homeService.SendRequest(currentUser.UserName, friend.UserName, Constants.FriendRequestString);
 
-            if (!DoesUserExist)
-            {
-                var contract = new Friend()
-                {
-                    UserId = currentUser.Id,
-                    ContractId = friend.Id,
-                };
-
-                this.Context.Friends.Add(contract);
-                await this.Context.SaveChangesAsync();
-            }
-            return RedirectToAction("Friends", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
         public async Task<IActionResult> RemoveFriend(string username)
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
-            var friendUser = this.Context.Users.FirstOrDefault(u => u.UserName == username);
 
-            var friend = this.Context.Friends.FirstOrDefault(f => f.UserId == currentUser.Id && f.ContractId == friendUser.Id);
-
-            this.Context.Friends.Remove(friend);
-            this.Context.SaveChanges();
+            this.homeService.RemoveFriend(username, currentUser.UserName);
 
             return RedirectToAction("Friends", "Home");
         }

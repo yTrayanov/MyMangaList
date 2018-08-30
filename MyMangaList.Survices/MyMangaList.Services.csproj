@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyMangaList.Data\MyMangaList.Data.csproj" />
-    <ProjectReference Include="..\MyMangaList.ViewModels\MyMangaList.ViewModels.csproj" />
+    <ProjectReference Include="..\MyMangaList.Mapper\MyMangaList.Mapper.csproj" />
+    <ProjectReference Include="..\MyMangaList.ViewModels\MyMangaList.DtoModels.csproj" />
   </ItemGroup>
 
 </Project>

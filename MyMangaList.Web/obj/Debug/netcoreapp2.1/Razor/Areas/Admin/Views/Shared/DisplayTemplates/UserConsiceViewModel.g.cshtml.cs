@@ -19,12 +19,12 @@ using MyMangaList.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Admin\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.ViewModels;
+using MyMangaList.DtoModels.ViewModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a04a3017fb2c1b322a37ee6d3550b8166608ec62", @"/Areas/Admin/Views/Shared/DisplayTemplates/UserConsiceViewModel.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bd89de7d06bae4d1c5ed36adc1b9fcecb2fdffad", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f3e51edc5612486c1fd6328eb2f00eacd97a7e7", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Shared_DisplayTemplates_UserConsiceViewModel : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<UserConsiceViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "Admin", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -76,7 +76,7 @@ using MyMangaList.ViewModels.ViewModels;
             WriteLiteral("</td>\r\n    <td>");
             EndContext();
             BeginContext(102, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c0b961b40c994e52b19e5b2e8b8cc337", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26fc6d77798242b68195d995c7dee5a4", async() => {
                 BeginContext(192, 7, true);
                 WriteLiteral("Details");
                 EndContext();

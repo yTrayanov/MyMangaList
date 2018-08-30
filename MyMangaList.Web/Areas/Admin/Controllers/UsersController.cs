@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyMangaList.Data;
 using MyMangaList.Models;
-using MyMangaList.ViewModels.ViewModels;
+using MyMangaList.DtoModels.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

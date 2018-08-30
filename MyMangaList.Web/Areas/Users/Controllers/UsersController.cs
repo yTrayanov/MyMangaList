@@ -4,7 +4,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
-    using MyMangaList.Common;
+    using MyMangaList.Constants;
     using MyMangaList.Data;
     using MyMangaList.Models;
     using MyMangaList.Services.Users;
@@ -13,17 +13,11 @@
     [Authorize(Roles = Constants.User)]
     public class UsersController : Controller
     {
-        protected UsersController(MyMangaListContext context, UserManager<User> userManager, IMapper mapper, HomeService homeService)
+        protected UsersController(UserManager<User> userManager)
         {
-            this.Context = context;
             this.UserManager = userManager;
-            this.Mapper = mapper;
-            this.HomeService = homeService;
         }
 
-        protected MyMangaListContext Context { get; set; }
         protected UserManager<User> UserManager { get; set; }
-        protected IMapper Mapper { get; set; }
-        public HomeService HomeService { get; set; }
     }   
 }

@@ -19,22 +19,22 @@ using MyMangaList.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.ViewModels;
+using MyMangaList.DtoModels.ViewModels;
 
 #line default
 #line hidden
 #line 3 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.BindingModels;
+using MyMangaList.DtoModels.BindingModels;
 
 #line default
 #line hidden
 #line 4 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.MixedModels;
+using MyMangaList.DtoModels.MixedModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6af5ce39343db02067b8f6d6649d6fb77909b15f", @"/Areas/Users/Views/Group/AddUser.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1c1d819689377b9c6d3567fcfc262454694daf4b", @"/Areas/Users/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"52bb22c8b1a2162133a3cf6c220ad7aaee172de9", @"/Areas/Users/Views/_ViewImports.cshtml")]
     public class Areas_Users_Views_Group_AddUser : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<UserAddBindingModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -74,12 +74,12 @@ using MyMangaList.ViewModels.MixedModels;
 #line default
 #line hidden
             BeginContext(71, 356, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81ead2f04d574a76938f6b9c3e21c8e5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "172ddddc6a9443ddbf28507c094f27ad", async() => {
                 BeginContext(91, 40, true);
                 WriteLiteral("\r\n    <div class=\"form-group\">\r\n        ");
                 EndContext();
                 BeginContext(131, 41, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3a2cabd0cba4533af4b87f4d4538ecc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f336c13c83034ec89e503882c9e1c0e4", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper>();
@@ -102,7 +102,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(182, 74, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1e52eb74a4624bf09b565cd27942a7b6", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d3a2459d42ec4adc9f6de5dd0564826f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -127,7 +127,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(266, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ec958c7a4a0407790dfe589cd030b57", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de00d863a507482693a046ad5eb25884", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();

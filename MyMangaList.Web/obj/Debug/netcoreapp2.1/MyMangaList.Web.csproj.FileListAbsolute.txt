@@ -66,9 +66,13 @@ C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\obj\Debug\netcoreapp2.1\
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Users\Views\Home\Friends.g.cshtml.cs
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Users\Views\Group\Chat.g.cshtml.cs
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Users\Views\Comment\Index.g.cshtml.cs
-C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.ViewModels.dll
-C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.ViewModels.pdb
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.Mapper.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.Mapper.pdb
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.Services.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.Services.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.DtoModels.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.DtoModels.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.Constants.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\bin\Debug\netcoreapp2.1\MyMangaList.Constants.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ExternalLogin.g.cshtml.cs
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Users\Views\Request\Index.g.cshtml.cs

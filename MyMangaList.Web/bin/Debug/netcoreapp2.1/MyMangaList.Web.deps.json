@@ -30,9 +30,9 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
           "MyMangaList.Common": "1.0.0",
           "MyMangaList.Data": "1.0.0",
+          "MyMangaList.DtoModels": "1.0.0",
           "MyMangaList.Mapper": "1.0.0",
-          "MyMangaList.Services": "1.0.0",
-          "MyMangaList.ViewModels": "1.0.0"
+          "MyMangaList.Services": "1.0.0"
         },
         "runtime": {
           "MyMangaList.Web.dll": {}
@@ -553,6 +553,7 @@
           "Microsoft.AspNetCore.Identity": "2.1.1",
           "Microsoft.Extensions.Configuration": "2.1.1",
           "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "MyMangaList.Constants": "1.0.0",
           "MyMangaList.Models": "1.0.0"
         },
         "runtime": {
@@ -560,6 +561,14 @@
         },
         "compile": {
           "MyMangaList.Common.dll": {}
+        }
+      },
+      "MyMangaList.Constants/1.0.0": {
+        "runtime": {
+          "MyMangaList.Constants.dll": {}
+        },
+        "compile": {
+          "MyMangaList.Constants.dll": {}
         }
       },
       "MyMangaList.Data/1.0.0": {
@@ -575,11 +584,22 @@
           "MyMangaList.Data.dll": {}
         }
       },
+      "MyMangaList.DtoModels/1.0.0": {
+        "dependencies": {
+          "MyMangaList.Models": "1.0.0"
+        },
+        "runtime": {
+          "MyMangaList.DtoModels.dll": {}
+        },
+        "compile": {
+          "MyMangaList.DtoModels.dll": {}
+        }
+      },
       "MyMangaList.Mapper/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
-          "MyMangaList.Models": "1.0.0",
-          "MyMangaList.ViewModels": "1.0.0"
+          "MyMangaList.DtoModels": "1.0.0",
+          "MyMangaList.Models": "1.0.0"
         },
         "runtime": {
           "MyMangaList.Mapper.dll": {}
@@ -590,7 +610,8 @@
       },
       "MyMangaList.Models/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
+          "MyMangaList.Constants": "1.0.0"
         },
         "runtime": {
           "MyMangaList.Models.dll": {}
@@ -603,24 +624,14 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
           "MyMangaList.Data": "1.0.0",
-          "MyMangaList.ViewModels": "1.0.0"
+          "MyMangaList.DtoModels": "1.0.0",
+          "MyMangaList.Mapper": "1.0.0"
         },
         "runtime": {
           "MyMangaList.Services.dll": {}
         },
         "compile": {
           "MyMangaList.Services.dll": {}
-        }
-      },
-      "MyMangaList.ViewModels/1.0.0": {
-        "dependencies": {
-          "MyMangaList.Models": "1.0.0"
-        },
-        "runtime": {
-          "MyMangaList.ViewModels.dll": {}
-        },
-        "compile": {
-          "MyMangaList.ViewModels.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3767,7 +3778,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "MyMangaList.Constants/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "MyMangaList.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyMangaList.DtoModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3783,11 +3804,6 @@
       "sha512": ""
     },
     "MyMangaList.Services/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MyMangaList.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MyMangaList.ViewModels.BindingModels
+namespace MyMangaList.DtoModels.BindingModels
 {
     public class MangaBindingModel
     {

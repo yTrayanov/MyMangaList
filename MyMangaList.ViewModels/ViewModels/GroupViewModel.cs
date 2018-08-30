@@ -1,7 +1,7 @@
 ﻿using MyMangaList.Models;
 using System.Collections.Generic;
 
-namespace MyMangaList.ViewModels.ViewModels
+namespace MyMangaList.DtoModels.ViewModels
 {
     public class GroupViewModel
     {

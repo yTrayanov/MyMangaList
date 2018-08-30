@@ -19,22 +19,22 @@ using MyMangaList.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.ViewModels;
+using MyMangaList.DtoModels.ViewModels;
 
 #line default
 #line hidden
 #line 3 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.BindingModels;
+using MyMangaList.DtoModels.BindingModels;
 
 #line default
 #line hidden
 #line 4 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\_ViewImports.cshtml"
-using MyMangaList.ViewModels.MixedModels;
+using MyMangaList.DtoModels.MixedModels;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b54b6f334206e98b728c8b4e5ecb3ff23941509", @"/Areas/Users/Views/Group/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1c1d819689377b9c6d3567fcfc262454694daf4b", @"/Areas/Users/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"52bb22c8b1a2162133a3cf6c220ad7aaee172de9", @"/Areas/Users/Views/_ViewImports.cshtml")]
     public class Areas_Users_Views_Group_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<GroupViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "Users", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -86,7 +86,7 @@ using MyMangaList.ViewModels.MixedModels;
             WriteLiteral("<div>\r\n    <p>");
             EndContext();
             BeginContext(147, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "854bd198017f4a97a85fab62ba7a048e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d46a20ace38848bd86fffe6850ff1550", async() => {
                 BeginContext(234, 11, false);
 #line 10 "C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Web\Areas\Users\Views\Group\Index.cshtml"
                                                                                         Write(group.Title);
@@ -129,7 +129,7 @@ using MyMangaList.ViewModels.MixedModels;
             WriteLiteral("</p>\r\n    <p>");
             EndContext();
             BeginContext(262, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2fc3bd4a7e046cea745b773823fc6c3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8a2860d7edf4867a9501f8d7b610ad8", async() => {
                 BeginContext(351, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -168,7 +168,7 @@ using MyMangaList.ViewModels.MixedModels;
             WriteLiteral("</p>\r\n    ");
             EndContext();
             BeginContext(372, 127, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d16ba73b51a463a9defa1bfe5b5c39e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4d021db398d4949b278be98a9c25ad6", async() => {
                 BeginContext(485, 10, true);
                 WriteLiteral("Add member");
                 EndContext();
@@ -208,7 +208,7 @@ using MyMangaList.ViewModels.MixedModels;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(505, 131, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57a66e6eb8234ab7ba7c2a5dbd84d9b2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dcf1378a4ef54dcdaec26919bc302989", async() => {
                 BeginContext(621, 11, true);
                 WriteLiteral("Leave group");
                 EndContext();
@@ -256,7 +256,7 @@ using MyMangaList.ViewModels.MixedModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(651, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7243d033f2e44129a29b7dd7c63f8b2f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d151d053f88f4172b07aabe53a05c44f", async() => {
                 BeginContext(743, 16, true);
                 WriteLiteral("Create new group");
                 EndContext();

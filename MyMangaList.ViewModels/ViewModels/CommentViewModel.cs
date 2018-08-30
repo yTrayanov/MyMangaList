@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyMangaList.ViewModels.ViewModels
+namespace MyMangaList.DtoModels.ViewModels
 {
     public class CommentViewModel
     {

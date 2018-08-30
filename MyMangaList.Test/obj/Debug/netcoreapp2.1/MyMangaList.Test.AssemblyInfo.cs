@@ -11,6 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMangaList.Constants, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Constants", "MyMangaList.Constants.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMangaList.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Data", "MyMangaList.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMangaList.DtoModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels", "MyMangaList.DtoModels.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMangaList.Mapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Mapper", "MyMangaList.Mapper.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMangaList.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Models", "MyMangaList.Models.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMangaList.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Survices", "MyMangaList.Services.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyMangaList.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

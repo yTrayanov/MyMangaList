@@ -135,7 +135,8 @@ namespace MyMangaList.Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Content");
+                    b.Property<string>("Content")
+                        .IsRequired();
 
                     b.Property<DateTime>("Date");
 
@@ -177,9 +178,11 @@ namespace MyMangaList.Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Creator");
+                    b.Property<string>("Creator")
+                        .IsRequired();
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -196,17 +199,22 @@ namespace MyMangaList.Web.Data.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<string>("Genre");
+                    b.Property<string>("Genre")
+                        .IsRequired();
 
-                    b.Property<string>("Image");
+                    b.Property<string>("Image")
+                        .IsRequired();
 
                     b.Property<DateTime>("LastUpdated");
 
-                    b.Property<string>("ShortDescription");
+                    b.Property<string>("ShortDescription")
+                        .IsRequired();
 
-                    b.Property<string>("Story");
+                    b.Property<string>("Story")
+                        .IsRequired();
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -221,7 +229,8 @@ namespace MyMangaList.Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Content");
+                    b.Property<string>("Content")
+                        .IsRequired();
 
                     b.Property<int>("GroupId");
 
@@ -234,6 +243,27 @@ namespace MyMangaList.Web.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("MyMangaList.Models.Request", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Author")
+                        .IsRequired();
+
+                    b.Property<string>("Content")
+                        .IsRequired();
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Requests");
                 });
 
             modelBuilder.Entity("MyMangaList.Models.User", b =>
@@ -405,6 +435,13 @@ namespace MyMangaList.Web.Data.Migrations
 
                     b.HasOne("MyMangaList.Models.User", "User")
                         .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("MyMangaList.Models.Request", b =>
+                {
+                    b.HasOne("MyMangaList.Models.User", "User")
+                        .WithMany("Requests")
                         .HasForeignKey("UserId");
                 });
 

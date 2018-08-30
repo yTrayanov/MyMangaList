@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace MyMangaList.Models
+﻿namespace MyMangaList.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class Group
     {
         public Group()
@@ -12,8 +13,10 @@ namespace MyMangaList.Models
 
         public int Id { get; set; }
         
+        [Required]
         public string Creator { get; set; }
         
+        [Required]
         public string Title { get; set; }
 
         public ICollection<UsersInGroups> Users { get; set; }

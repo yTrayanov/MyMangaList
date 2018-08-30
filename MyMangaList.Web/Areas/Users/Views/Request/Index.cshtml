@@ -1,0 +1,19 @@
+﻿@model IEnumerable<RequestViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>My Requests</h2>
+
+@if (Model.Any())
+{
+    @foreach (var request in Model)
+    {
+        <p>@request.Content</p>
+        <a class="btn btn-default" asp-area="Users" asp-controller="Request" asp-action="Accept" 
+           asp-route-userId="@request.AuthorId" asp-route-requestId="@request.RequestId">Accept</a>
+
+        <a class="btn btn-default" asp-area="Users" asp-controller="Request" 
+           asp-action="Decline" asp-route-requestId="@request.RequestId">Decline</a>
+    }
+}

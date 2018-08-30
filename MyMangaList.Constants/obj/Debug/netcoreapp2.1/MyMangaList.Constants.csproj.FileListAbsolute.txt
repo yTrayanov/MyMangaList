@@ -1,0 +1,9 @@
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\bin\Debug\netcoreapp2.1\MyMangaList.Constants.deps.json
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\bin\Debug\netcoreapp2.1\MyMangaList.Constants.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\bin\Debug\netcoreapp2.1\MyMangaList.Constants.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\obj\Debug\netcoreapp2.1\MyMangaList.Constants.csprojAssemblyReference.cache
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\obj\Debug\netcoreapp2.1\MyMangaList.Constants.csproj.CoreCompileInputs.cache
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\obj\Debug\netcoreapp2.1\MyMangaList.Constants.AssemblyInfoInputs.cache
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\obj\Debug\netcoreapp2.1\MyMangaList.Constants.AssemblyInfo.cs
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\obj\Debug\netcoreapp2.1\MyMangaList.Constants.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Constants\obj\Debug\netcoreapp2.1\MyMangaList.Constants.pdb

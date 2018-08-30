@@ -13,13 +13,15 @@ C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Data.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Mapper.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Models.dll
-C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.ViewModels.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Data.pdb
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Mapper.pdb
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Models.pdb
-C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.ViewModels.pdb
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\obj\Debug\netcoreapp2.1\MyMangaList.Test.csproj.CopyComplete
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\obj\Debug\netcoreapp2.1\MyMangaList.Test.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\obj\Debug\netcoreapp2.1\MyMangaList.Test.pdb
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Services.dll
 C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Services.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.DtoModels.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.DtoModels.pdb
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Constants.dll
+C:\Users\Yavor\source\repos\MyMangaList\MyMangaList.Test\bin\Debug\netcoreapp2.1\MyMangaList.Constants.pdb

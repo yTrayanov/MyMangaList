@@ -73,12 +73,18 @@ namespace MyMangaList.Web
                     RequireNonAlphanumeric = false
                 };
 
+                options.User.AllowedUserNameCharacters = options.User.AllowedUserNameCharacters + " ";
+
                 //options.SignIn.RequireConfirmedEmail = true;
             });
 
             services.AddAutoMapper();
 
             services.AddTransient(typeof(HomeService));
+            services.AddTransient(typeof(GroupService));
+            services.AddTransient(typeof(CommentService));
+            services.AddTransient(typeof(MangaService));
+            services.AddTransient(typeof(RequestService));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -1,52 +1,37 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MyMangaList.Data;
-using MyMangaList.Models;
-using MyMangaList.Services.Users;
-using MyMangaList.ViewModels.BindingModels;
-using MyMangaList.ViewModels.MixedModels;
-using MyMangaList.ViewModels.ViewModels;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MyMangaList.Web.Areas.Users.Controllers
+﻿namespace MyMangaList.Web.Areas.Users.Controllers
 {
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using AutoMapper;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+
+    using MyMangaList.Data;
+    using MyMangaList.Models;
+    using MyMangaList.Services.Users;
+    using MyMangaList.DtoModels.BindingModels;
+    using MyMangaList.DtoModels.MixedModels;
+    using MyMangaList.DtoModels.ViewModels;
+    
+
     public class CommentController : UsersController
     {
-        public CommentController(MyMangaListContext context, UserManager<User> userManager, IMapper mapper, HomeService homeService) 
-            : base(context, userManager, mapper, homeService)
+        private CommentService commentService;
+
+        public CommentController(UserManager<User> userManager , CommentService commentService) 
+            : base(userManager)
         {
+            this.commentService = commentService;
         }
+    
+        
 
         [HttpGet]
-        public async Task<IActionResult> Index(int id)
+        public IActionResult Index(int id)
         {
-            var currentUser = await this.UserManager.GetUserAsync(this.User);
-
-            var comments = this.Context
-                .Comments
-                .Include(c => c.User)
-                .Where(c => c.MangaId == id);
-
-            var bindingModel = new CommentBindingModel();
-            var model = new CommentViewBindingModel() { BindingModel = bindingModel};
-
-            model.BindingModel.MangaId = id;
-
-            foreach (var comment in comments)
-            {
-                var viewModel = new CommentViewModel()
-                {
-                    Content = comment.Content,
-                    User = comment.User.UserName,
-                    Date = comment.Date.ToString()
-                };
-                model.ViewModels.Add(viewModel);
-            }
-
+            var model = this.commentService.GetAllComments(id);
 
             return View(model);
         }
@@ -56,15 +41,7 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
 
-            var comment = new MyMangaList.Models.Comment()
-            {
-                Content = model.BindingModel.Content,
-                User = currentUser,
-                MangaId = id,
-                Date = DateTime.Now
-            };
-            this.Context.Comments.Add(comment);
-            this.Context.SaveChanges();
+            this.commentService.AddComment(currentUser.UserName, model.BindingModel.Content, id);
 
             return RedirectToAction("Index", "Comment");
         }

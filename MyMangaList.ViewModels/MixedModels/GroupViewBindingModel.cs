@@ -1,8 +1,8 @@
-﻿using MyMangaList.ViewModels.BindingModels;
-using MyMangaList.ViewModels.ViewModels;
+﻿using MyMangaList.DtoModels.BindingModels;
+using MyMangaList.DtoModels.ViewModels;
 using System.Collections.Generic;
 
-namespace MyMangaList.ViewModels.MixedModels
+namespace MyMangaList.DtoModels.MixedModels
 {
     public class GroupViewBindingModel
     {

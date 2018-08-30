@@ -1,13 +1,13 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using MyMangaList.Common;
-using MyMangaList.Data;
-using MyMangaList.Models;
-
-namespace MyMangaList.Web.Areas.Admin.Controllers
+﻿namespace MyMangaList.Web.Areas.Admin.Controllers
 {
+    using AutoMapper;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using MyMangaList.Constants;
+    using MyMangaList.Data;
+    using MyMangaList.Models;
+
     [Area("Admin")]
     [Authorize(Roles = Constants.Administrator)]
     public class AdminController : Controller

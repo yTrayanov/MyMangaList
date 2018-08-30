@@ -4643,6 +4643,7 @@
           "Microsoft.AspNetCore.Identity": "2.1.0",
           "Microsoft.Extensions.Configuration": "2.1.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.0",
+          "MyMangaList.Constants": "1.0.0",
           "MyMangaList.Models": "1.0.0"
         },
         "compile": {
@@ -4650,6 +4651,16 @@
         },
         "runtime": {
           "bin/placeholder/MyMangaList.Common.dll": {}
+        }
+      },
+      "MyMangaList.Constants/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/MyMangaList.Constants.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyMangaList.Constants.dll": {}
         }
       },
       "MyMangaList.Data/1.0.0": {
@@ -4667,13 +4678,26 @@
           "bin/placeholder/MyMangaList.Data.dll": {}
         }
       },
+      "MyMangaList.DtoModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MyMangaList.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyMangaList.DtoModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyMangaList.DtoModels.dll": {}
+        }
+      },
       "MyMangaList.Mapper/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
-          "MyMangaList.Models": "1.0.0",
-          "MyMangaList.ViewModels": "1.0.0"
+          "MyMangaList.DtoModels": "1.0.0",
+          "MyMangaList.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyMangaList.Mapper.dll": {}
@@ -4686,7 +4710,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "MyMangaList.Constants": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyMangaList.Models.dll": {}
@@ -4701,26 +4726,14 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
           "MyMangaList.Data": "1.0.0",
-          "MyMangaList.ViewModels": "1.0.0"
+          "MyMangaList.DtoModels": "1.0.0",
+          "MyMangaList.Mapper": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyMangaList.Services.dll": {}
         },
         "runtime": {
           "bin/placeholder/MyMangaList.Services.dll": {}
-        }
-      },
-      "MyMangaList.ViewModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "MyMangaList.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MyMangaList.ViewModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MyMangaList.ViewModels.dll": {}
         }
       }
     }
@@ -12381,10 +12394,20 @@
       "path": "../MyMangaList.Common/MyMangaList.Common.csproj",
       "msbuildProject": "../MyMangaList.Common/MyMangaList.Common.csproj"
     },
+    "MyMangaList.Constants/1.0.0": {
+      "type": "project",
+      "path": "../MyMangaList.Constants/MyMangaList.Constants.csproj",
+      "msbuildProject": "../MyMangaList.Constants/MyMangaList.Constants.csproj"
+    },
     "MyMangaList.Data/1.0.0": {
       "type": "project",
       "path": "../MyMangaList.Data/MyMangaList.Data.csproj",
       "msbuildProject": "../MyMangaList.Data/MyMangaList.Data.csproj"
+    },
+    "MyMangaList.DtoModels/1.0.0": {
+      "type": "project",
+      "path": "../MyMangaList.ViewModels/MyMangaList.DtoModels.csproj",
+      "msbuildProject": "../MyMangaList.ViewModels/MyMangaList.DtoModels.csproj"
     },
     "MyMangaList.Mapper/1.0.0": {
       "type": "project",
@@ -12400,11 +12423,6 @@
       "type": "project",
       "path": "../MyMangaList.Survices/MyMangaList.Services.csproj",
       "msbuildProject": "../MyMangaList.Survices/MyMangaList.Services.csproj"
-    },
-    "MyMangaList.ViewModels/1.0.0": {
-      "type": "project",
-      "path": "../MyMangaList.ViewModels/MyMangaList.ViewModels.csproj",
-      "msbuildProject": "../MyMangaList.ViewModels/MyMangaList.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12415,9 +12433,9 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
       "MyMangaList.Common >= 1.0.0",
       "MyMangaList.Data >= 1.0.0",
+      "MyMangaList.DtoModels >= 1.0.0",
       "MyMangaList.Mapper >= 1.0.0",
-      "MyMangaList.Services >= 1.0.0",
-      "MyMangaList.ViewModels >= 1.0.0"
+      "MyMangaList.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12462,8 +12480,8 @@
             "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Survices\\MyMangaList.Services.csproj": {
               "projectPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.Survices\\MyMangaList.Services.csproj"
             },
-            "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.ViewModels.csproj": {
-              "projectPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.ViewModels.csproj"
+            "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.DtoModels.csproj": {
+              "projectPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.DtoModels.csproj"
             }
           }
         }

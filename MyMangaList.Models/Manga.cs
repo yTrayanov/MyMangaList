@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MyMangaList.Models
+﻿namespace MyMangaList.Models
 {
+    using Constants;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class Manga
     {
         public Manga()
@@ -12,16 +14,25 @@ namespace MyMangaList.Models
 
         public int Id { get; set; }
 
+        [Required]
         public string Title { get; set; }
 
+        [Required]
+        [MinLength(Constants.ShortDescriptionMinLenght)]
         public string ShortDescription { get; set; }
 
+        [Required]
+        [MinLength(Constants.StoryMinLenght)]
         public string Story { get; set; }
 
+        [Required]
         public string Genre { get; set; }
 
+        [Required]
+        [DataType(DataType.ImageUrl)]
         public string Image { get; set; }
 
+        [Required]
         public DateTime Date { get; set; }
 
         public DateTime LastUpdated { get; set; }

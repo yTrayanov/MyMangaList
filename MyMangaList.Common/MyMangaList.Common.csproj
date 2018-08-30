@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyMangaList.Constants\MyMangaList.Constants.csproj" />
     <ProjectReference Include="..\MyMangaList.Models\MyMangaList.Models.csproj" />
   </ItemGroup>
 

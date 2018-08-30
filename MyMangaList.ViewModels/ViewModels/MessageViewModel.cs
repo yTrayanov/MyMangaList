@@ -1,4 +1,4 @@
-﻿namespace MyMangaList.ViewModels.ViewModels
+﻿namespace MyMangaList.DtoModels.ViewModels
 {
     public class MessageViewModel
     {

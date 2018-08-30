@@ -1,4 +1,4 @@
-﻿namespace MyMangaList.ViewModels.BindingModels
+﻿namespace MyMangaList.DtoModels.BindingModels
 {
     public class MessageBindingModel
     {

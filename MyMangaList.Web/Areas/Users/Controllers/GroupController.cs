@@ -1,24 +1,28 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MyMangaList.Data;
-using MyMangaList.Models;
-using MyMangaList.Services.Users;
-using MyMangaList.ViewModels.BindingModels;
-using MyMangaList.ViewModels.MixedModels;
-using MyMangaList.ViewModels.ViewModels;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MyMangaList.Web.Areas.Users.Controllers
+﻿namespace MyMangaList.Web.Areas.Users.Controllers
 {
+    using AutoMapper;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+    using MyMangaList.Data;
+    using MyMangaList.Models;
+    using MyMangaList.Services.Users;
+    using MyMangaList.DtoModels.BindingModels;
+    using MyMangaList.DtoModels.MixedModels;
+    using MyMangaList.DtoModels.ViewModels;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Constants;
+
     public class GroupController : UsersController
     {
-        public GroupController(MyMangaListContext context, UserManager<User> userManager, IMapper mapper, HomeService homeService) 
-            : base(context, userManager, mapper, homeService)
+        private GroupService groupService;
+
+        public GroupController(UserManager<User> userManager , GroupService groupService) 
+            : base(userManager)
         {
+            this.groupService = groupService;
         }
 
         [HttpGet]
@@ -26,31 +30,7 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
 
-            var usersInGroups = this.Context
-                .UsersInGrouos
-                .Where(ug => ug.UserId == currentUser.Id);
-
-            var groups = new List<MyMangaList.Models.Group>();
-            foreach (var userInGroup in usersInGroups)
-            {
-                if (userInGroup.UserId == currentUser.Id)
-                {
-                    var group = this.Context.Groups.FirstOrDefault(g => g.Id == userInGroup.GroupId);
-                    groups.Add(group);
-                }
-            }
-
-            var model = new List<GroupViewModel>();
-
-            foreach (var group in groups)
-            {
-                var gv = new GroupViewModel()
-                {
-                    Id = group.Id,
-                    Title = group.Title,
-                };
-                model.Add(gv);
-            }
+            var model = this.groupService.GetAllGroups(currentUser.UserName);
 
             return View(model);
         }
@@ -66,46 +46,15 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
 
-            var group = new MyMangaList.Models.Group()
-            {
-                Title = model.Title,
-                Creator = currentUser.UserName
-            };
+            var id = this.groupService.CreateGroup(model.Title , currentUser.UserName);
 
-            var userGroup = new UsersInGroups()
-            {
-                User = currentUser,
-                Group = group
-            };
-            this.Context.UsersInGrouos.Add(userGroup);
-            this.Context.SaveChanges();
-
-            return RedirectToAction("Details", "Group", new { group.Id});
+            return RedirectToAction("Details", "Group", new { id});
         }
 
         [HttpGet]
         public IActionResult Details(int id )
         {
-            var userGroup = this.Context
-                .UsersInGrouos
-                .Where(g => g.GroupId == id)
-                .ToList();
-
-            var group = this.Context.Groups.Find(id);
-
-            var model = new GroupViewModel()
-            {
-                Title = group.Title,
-                Creator = group.Creator,
-                Members = new List<User>()
-                
-            };
-
-            foreach (var member in userGroup)
-            {
-                var user = this.Context.Users.FirstOrDefault(u => u.Id == member.UserId);
-                model.Members.Add(user);
-            }
+            var model = this.groupService.GetDetailsOfGroup(id);
 
             return this.View(model);
         }
@@ -116,48 +65,31 @@ namespace MyMangaList.Web.Areas.Users.Controllers
             return View();
         }
 
+        //Add model state!
         [HttpPost]
-        public IActionResult AddUser(int id,UserAddBindingModel model)
+        public async Task<IActionResult> AddUser(int id,UserAddBindingModel model)
         {
-            var user = this.Context.Users.FirstOrDefault(u => u.UserName == model.Username);
+            var currentUser = await this.UserManager.GetUserAsync(this.User);
+            var user = this.groupService.FindUserByName(model.Username);
+
             if (user == null)
             {
-                return NotFound();
+                ModelState.AddModelError("Not Found", "This user doesn't exist. Please try again.");
+                return View();
             }
 
-            var group = this.Context.Groups.Find(id);
-            var userGroup = new UsersInGroups() { UserId = user.Id, GroupId = id };
+            this.groupService.AddUserToGroup(id, user.Id);
 
-            if (!group.Users.Contains(userGroup))
-            {
-                this.Context.UsersInGrouos.Add(userGroup);
-                this.Context.SaveChanges();
-            }
-
-            return RedirectToAction("Details","Group",new {group.Id });
+            return RedirectToAction("Index","Group");
         }
         
         [HttpGet]
         public async Task<IActionResult> LeaveGroup(int id)
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
-            
 
-            var userInGroup = await this.Context.UsersInGrouos
-                .FirstOrDefaultAsync(g => g.UserId == currentUser.Id && g.GroupId == id);
-            
-            this.Context.UsersInGrouos.Remove(userInGroup);
-            this.Context.SaveChanges();
 
-            var group = this.Context.Groups.Find(id);
-            var membersLeft = this.Context.UsersInGrouos
-                .Any(ug => ug.GroupId == id);
-
-            if (!membersLeft)
-            {
-                this.Context.Groups.Remove(group);
-                this.Context.SaveChanges();
-            }
+            this.groupService.LeaveGroup(currentUser.UserName, id);
 
             return RedirectToAction("Index", "Group");
         }
@@ -165,23 +97,7 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         [HttpGet]
         public IActionResult Chat(int id)
         {
-            var messages = this.Context.Messages
-                .Include(m => m.User)
-                .Where(m => m.GroupId == id)
-                .ToList();
-
-            var groupName = this.Context.Groups.FirstOrDefault(g => g.Id == id).Title;
-
-            var messagesCollection = this.Mapper
-                .Map<IEnumerable<MessageViewModel>>(messages)
-                .ToList();
-
-            var model = new GroupViewBindingModel()
-            {
-                GroupId = id,
-                GroupTitle = groupName,
-                ViewModel = messagesCollection,
-            };
+            var model = this.groupService.GetAllMessagesOfGroup(id);
 
             return this.View(model);
         }
@@ -190,19 +106,7 @@ namespace MyMangaList.Web.Areas.Users.Controllers
         public async Task<IActionResult> Chat(GroupViewBindingModel model , int id)
         {
             var currentUser = await this.UserManager.GetUserAsync(this.User);
-            var group = this.Context.Groups.FirstOrDefault(g => g.Id == id);
-
-            var message = new Message()
-            {
-                User = currentUser,
-                Group = group,
-                Content = model.BindingModel.Content
-            };
-            
-
-
-            this.Context.Messages.Add(message);
-            this.Context.SaveChanges();
+            this.groupService.AddMessageToGroup(id, currentUser.UserName, model.BindingModel.Content);
 
             return RedirectToAction("Chat" , "Group" , new { id});
         }

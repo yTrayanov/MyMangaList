@@ -1,4 +1,4 @@
-﻿namespace MyMangaList.ViewModels.MixedModels
+﻿namespace MyMangaList.DtoModels.MixedModels
 {
     using System.Collections.Generic;
     using BindingModels;

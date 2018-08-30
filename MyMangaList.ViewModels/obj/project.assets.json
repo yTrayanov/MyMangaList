@@ -1218,11 +1218,22 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "MyMangaList.Constants/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/MyMangaList.Constants.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyMangaList.Constants.dll": {}
+        }
+      },
       "MyMangaList.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "MyMangaList.Constants": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyMangaList.Models.dll": {}
@@ -4018,6 +4029,11 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "MyMangaList.Constants/1.0.0": {
+      "type": "project",
+      "path": "../MyMangaList.Constants/MyMangaList.Constants.csproj",
+      "msbuildProject": "../MyMangaList.Constants/MyMangaList.Constants.csproj"
+    },
     "MyMangaList.Models/1.0.0": {
       "type": "project",
       "path": "../MyMangaList.Models/MyMangaList.Models.csproj",
@@ -4037,9 +4053,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.ViewModels.csproj",
-      "projectName": "MyMangaList.ViewModels",
-      "projectPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.DtoModels.csproj",
+      "projectName": "MyMangaList.DtoModels",
+      "projectPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\MyMangaList.DtoModels.csproj",
       "packagesPath": "C:\\Users\\Yavor\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Yavor\\source\\repos\\MyMangaList\\MyMangaList.ViewModels\\obj\\",
       "projectStyle": "PackageReference",

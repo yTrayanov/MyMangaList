@@ -17,6 +17,7 @@ namespace MyMangaList.Data
         public DbSet<Message> Messages { get; set; }
         public DbSet<UserManga> UsersManga { get; set; }
         public DbSet<Friend> Friends { get; set; }
+        public DbSet<Request> Requests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -39,6 +40,11 @@ namespace MyMangaList.Data
                 .HasMany(u => u.MyMangaList)
                 .WithOne(m => m.User)
                 .HasForeignKey(m => m.UserId);
+
+            builder.Entity<User>()
+                .HasMany(u => u.Requests)
+                .WithOne(r => r.User)
+                .HasForeignKey(r => r.UserId);
 
             builder.Entity<Friend>()
                 .HasOne(f => f.Contract)

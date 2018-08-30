@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMangaList.Models", "MyMan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMangaList.Common", "MyMangaList.Common\MyMangaList.Common.csproj", "{E0D32585-84FA-4033-8198-169872C7A705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMangaList.Services", "MyMangaList.Survices\MyMangaList.Services.csproj", "{18F7C676-C979-41E7-AB57-72F8EEA12285}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMangaList.Services", "MyMangaList.Survices\MyMangaList.Services.csproj", "{18F7C676-C979-41E7-AB57-72F8EEA12285}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMangaList.ViewModels", "MyMangaList.ViewModels\MyMangaList.ViewModels.csproj", "{BF786227-BD85-46FB-BC6F-669917495042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMangaList.DtoModels", "MyMangaList.ViewModels\MyMangaList.DtoModels.csproj", "{BF786227-BD85-46FB-BC6F-669917495042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMangaList.Mapper", "MyMangaList.Mapper\MyMangaList.Mapper.csproj", "{ACCB9DDF-7393-43FA-9C52-82CFB34F0C11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMangaList.Mapper", "MyMangaList.Mapper\MyMangaList.Mapper.csproj", "{ACCB9DDF-7393-43FA-9C52-82CFB34F0C11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMangaList.Test", "MyMangaList.Test\MyMangaList.Test.csproj", "{D44C17C2-5116-407D-9ED3-2BEAFDA47AB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyMangaList.Test", "MyMangaList.Test\MyMangaList.Test.csproj", "{D44C17C2-5116-407D-9ED3-2BEAFDA47AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMangaList.Constants", "MyMangaList.Constants\MyMangaList.Constants.csproj", "{A8B19520-62F5-4F49-80FE-2005A6D3FF51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{D44C17C2-5116-407D-9ED3-2BEAFDA47AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D44C17C2-5116-407D-9ED3-2BEAFDA47AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D44C17C2-5116-407D-9ED3-2BEAFDA47AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B19520-62F5-4F49-80FE-2005A6D3FF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B19520-62F5-4F49-80FE-2005A6D3FF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B19520-62F5-4F49-80FE-2005A6D3FF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B19520-62F5-4F49-80FE-2005A6D3FF51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

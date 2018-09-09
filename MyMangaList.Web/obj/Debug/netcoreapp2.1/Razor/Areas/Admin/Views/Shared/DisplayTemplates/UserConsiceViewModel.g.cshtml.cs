@@ -76,7 +76,7 @@ using MyMangaList.DtoModels.ViewModels;
             WriteLiteral("</td>\r\n    <td>");
             EndContext();
             BeginContext(102, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26fc6d77798242b68195d995c7dee5a4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21fb8bb1cdd94c0ab2792dc5e8000a72", async() => {
                 BeginContext(192, 7, true);
                 WriteLiteral("Details");
                 EndContext();

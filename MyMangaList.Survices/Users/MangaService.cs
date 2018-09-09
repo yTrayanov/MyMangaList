@@ -62,7 +62,7 @@
 
         public IEnumerable<MangaDetailsViewModel> GetFavouriteManga(string userId)
         {
-            var mangaList = new List<MyMangaList.Models.Manga>();
+            var mangaList = new List<Manga>();
             GetManga(userId, mangaList);
 
             var models = this.Mapper.Map<IEnumerable<MangaDetailsViewModel>>(mangaList);
@@ -118,7 +118,10 @@
                 var model = this.Context.Manga
                     .FirstOrDefault(m => m.Id == userManga.MangaId && userManga.UserId == userId);
 
-                mangaList.Add(model);
+                if (model != null)
+                {
+                    mangaList.Add(model);
+                }
             }
         }
     }

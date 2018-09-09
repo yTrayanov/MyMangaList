@@ -100,7 +100,7 @@ using MyMangaList.DtoModels.MixedModels;
             WriteLiteral("</p>\r\n        ");
             EndContext();
             BeginContext(212, 190, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1250402fb3d24607a1b25f333d56dd33", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d48daf198e9e4539b2ffb264b99f674d", async() => {
                 BeginContext(392, 6, true);
                 WriteLiteral("Accept");
                 EndContext();
@@ -152,7 +152,7 @@ using MyMangaList.DtoModels.MixedModels;
             WriteLiteral("        ");
             EndContext();
             BeginContext(414, 155, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a47fd7cb20094e6288ba1a456ab071f8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2dff9d59309346a6bc6a3915ec042425", async() => {
                 BeginContext(558, 7, true);
                 WriteLiteral("Decline");
                 EndContext();

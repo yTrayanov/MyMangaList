@@ -1,7 +1,6 @@
 ﻿namespace MyMangaList.Services.Users
 {
     using AutoMapper;
-    using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using MyMangaList.Data;
     using MyMangaList.DtoModels.MixedModels;

@@ -135,7 +135,7 @@ WriteAttributeValue("", 219, manga.Image, 219, 12, false);
             WriteLiteral("</p><p>\r\n                ");
             EndContext();
             BeginContext(416, 174, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aea17a6a2e1848b9b0e62587e8dff3d1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf837199d9534a95b1cf13449e39405c", async() => {
                 BeginContext(507, 79, true);
                 WriteLiteral("\r\n                    If you find this manga fun , click here\r\n                ");
                 EndContext();
@@ -174,7 +174,7 @@ WriteAttributeValue("", 219, manga.Image, 219, 12, false);
             WriteLiteral("\r\n            </p>\r\n            ");
             EndContext();
             BeginContext(622, 126, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9e226e3ddf3749499f230365835a0b88", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "301f069dfea0490280190dc3d229e508", async() => {
                 BeginContext(736, 8, true);
                 WriteLiteral("Unfavour");
                 EndContext();
